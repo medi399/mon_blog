@@ -2,11 +2,13 @@
 declare(strict_types=1);
 namespace App\Entity;
 
-use App\Repository\ArticleRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ArticleRepository;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
+#[ApiResource()]
 class Article
 {
     use ResourceId;

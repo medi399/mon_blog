@@ -31,6 +31,8 @@ trait Timestapable{
     public function setUpdatedAt(?\DateTimeInterface $updatedAt): Timestapable
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
     }
 
 }
